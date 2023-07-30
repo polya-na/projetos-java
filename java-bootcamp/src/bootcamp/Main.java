@@ -28,16 +28,16 @@ public class Main {
 		cursoJavaAvancado.setDescricao("Aprenda os conceitos avançados sobre Java.");
 		cursoJavaAvancado.setCargaHoraria(46);
 		
-		Mentoria mentoria = new Mentoria();
-		mentoria.setTitulo("Aprendendo Orientação a Objetos com Java");
-		mentoria.setDescricao("Imersão sobre os pilares da Orientação a Objetos.");
-		mentoria.setData(LocalDateTime.now());
+		Mentoria mentoriaJavaBasico = new Mentoria();
+		mentoriaJavaBasico.setTitulo("Aprendendo Orientação a Objetos com Java");
+		mentoriaJavaBasico.setDescricao("Imersão sobre os pilares da Orientação a Objetos.");
+		mentoriaJavaBasico.setData(LocalDateTime.now());
 		
 		Bootcamp bootcamp = new Bootcamp();
 		bootcamp.setNome("GFT START #2 Java");
 		bootcamp.setInicio(LocalDate.now());
 		bootcamp.setFim(bootcamp.getInicio().plusDays(45));
-		List<Conteudo> conteudosBootcamp = Arrays.asList(cursoJavaBasico, cursoJavaAvancado, mentoria);
+		List<Conteudo> conteudosBootcamp = Arrays.asList(cursoJavaBasico, cursoJavaAvancado, mentoriaJavaBasico);
 		bootcamp.setConteudos(conteudosBootcamp);
 		
 		Desenvolvedor dev1 = new Desenvolvedor();
@@ -48,6 +48,7 @@ public class Main {
 		
 		dev1.inscrever(cursoJavaScript);
 		dev1.inscrever(bootcamp);
+		dev1.inscrever(mentoriaJavaBasico);
 		dev1.progredir();
 		dev1.progredir();
 		
